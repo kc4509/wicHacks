@@ -8,11 +8,11 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-//import MenuIcon from "@mui/icons-material/Menu";
+import logo from "../Assets/pillow.png"
 
 export default function Header() {
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{bgcolor: "#091540"}}>
             <Toolbar>
                 {/*Inside the IconButton, we 
                     can render various icons*/}
@@ -23,6 +23,7 @@ export default function Header() {
                     aria-label="menu"
                     sx={{ mr: 2 }}
                 >
+                <img src={logo} alt="Logo" width={ "92px"}/>
                     
                 </IconButton>
                 {/* The Typography component applies 
@@ -35,7 +36,7 @@ export default function Header() {
                 >
                     <h2>Circadian Sleep Cycle Tracker</h2>
                 </Typography>
-                <Button color="inherit">Login</Button>
+                <Button color="inherit" sx={{}}>Login</Button>
             </Toolbar>
         </AppBar>
     );
